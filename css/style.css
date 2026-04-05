@@ -1,0 +1,537 @@
+:root {
+    --ocean-deep: #03193f;
+    --ocean-mid: #0a3060;
+    --ocean-teal: #0e6e8c;
+    --ocean-light: #1a9bbf;
+    --wave-cyan: #38c9e8;
+    --foam: #c8f0f8;
+    --sand: #f5e9d0;
+    --coral: #e05c3a;
+    --gold: #f0b429;
+    --white: #ffffff;
+    --text-light: #e8f4f8;
+    --text-muted: #7ec8dd;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ocean-deep);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Animated ocean background ── */
+  .ocean-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at 20% 50%, #0a2a5e 0%, #03193f 50%, #010d22 100%);
+    overflow: hidden;
+  }
+  .ocean-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 40% at 70% 80%, rgba(14,110,140,0.25) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 30% at 10% 30%, rgba(10,48,96,0.4) 0%, transparent 60%);
+  }
+  .wave-layer {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 300%;
+    height: 180px;
+    opacity: 0.08;
+    animation: waveFloat 18s ease-in-out infinite;
+  }
+  .wave-layer:nth-child(2) { animation-delay: -6s; opacity: 0.05; height: 220px; }
+  .wave-layer:nth-child(3) { animation-delay: -12s; opacity: 0.04; height: 260px; }
+  @keyframes waveFloat {
+    0%,100% { transform: translateX(0) translateY(0); }
+    33% { transform: translateX(3%) translateY(-15px); }
+    66% { transform: translateX(-3%) translateY(10px); }
+  }
+
+  /* ── Layout ── */
+  .poster {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    padding: 50px 40px 40px;
+    position: relative;
+    border-bottom: 1px solid rgba(56,201,232,0.2);
+    margin-bottom: 40px;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--wave-cyan), transparent);
+  }
+  .course-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--wave-cyan);
+    border: 1px solid rgba(56,201,232,0.4);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+    background: rgba(56,201,232,0.07);
+  }
+  .main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .main-title span {
+    color: var(--wave-cyan);
+    font-style: italic;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 28px;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14,110,140,0.25);
+    border: 1px solid rgba(56,201,232,0.2);
+    border-radius: 30px;
+    padding: 7px 18px;
+    font-size: 0.82rem;
+    color: var(--foam);
+  }
+  .meta-pill .icon { color: var(--wave-cyan); font-size: 1rem; }
+
+  /* ── Grid ── */
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+  .grid-wide { grid-column: span 2; }
+  .grid-full { grid-column: span 3; }
+
+  .grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: rgba(10,48,96,0.45);
+    border: 1px solid rgba(56,201,232,0.15);
+    border-radius: 16px;
+    padding: 26px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .card:hover { border-color: rgba(56,201,232,0.4); }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ocean-teal), var(--wave-cyan));
+    opacity: 0.7;
+  }
+  .card.accent-coral::before { background: linear-gradient(90deg, #c0392b, var(--coral)); }
+  .card.accent-gold::before { background: linear-gradient(90deg, #c88a00, var(--gold)); }
+  .card.accent-teal::before { background: linear-gradient(90deg, var(--ocean-teal), #00e5ff); }
+
+  .card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--wave-cyan);
+    margin-bottom: 12px;
+    opacity: 0.8;
+  }
+  .card-label.coral { color: #ff8c70; }
+  .card-label.gold { color: var(--gold); }
+
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--foam);
+    margin: 14px 0 8px;
+    font-weight: 600;
+  }
+  .card p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(200,240,248,0.85);
+    font-weight: 300;
+  }
+
+  /* ── Intro card special ── */
+  .intro-card {
+    background: linear-gradient(135deg, rgba(10,48,96,0.6) 0%, rgba(14,110,140,0.3) 100%);
+    border-color: rgba(56,201,232,0.25);
+  }
+  .intro-card p { font-size: 0.92rem; }
+
+  /* ── Stat boxes ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .stat-box {
+    background: rgba(3,25,63,0.6);
+    border: 1px solid rgba(56,201,232,0.2);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--wave-cyan);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-number.coral { color: var(--coral); }
+  .stat-number.gold { color: var(--gold); }
+  .stat-label {
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+  }
+
+  /* ── Bullet lists ── */
+  .bullet-list {
+    list-style: none;
+    margin-top: 10px;
+  }
+  .bullet-list li {
+    font-size: 0.86rem;
+    color: rgba(200,240,248,0.85);
+    line-height: 1.7;
+    padding-left: 18px;
+    position: relative;
+    font-weight: 300;
+    margin-bottom: 4px;
+  }
+  .bullet-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--wave-cyan);
+    font-size: 0.7rem;
+    top: 4px;
+  }
+  .bullet-list.coral li::before { color: var(--coral); }
+  .bullet-list.gold li::before { color: var(--gold); }
+
+  /* ── Timeline ── */
+  .timeline {
+    position: relative;
+    margin-top: 14px;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--wave-cyan), transparent);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -17px; top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--wave-cyan);
+    border: 2px solid var(--ocean-deep);
+  }
+  .timeline-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--wave-cyan);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .timeline-text {
+    font-size: 0.84rem;
+    color: rgba(200,240,248,0.85);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── Map placeholder ── */
+  .map-visual {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(3,25,63,0.7);
+    border: 1px solid rgba(56,201,232,0.2);
+    margin-top: 14px;
+    position: relative;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-visual svg { width: 100%; height: 100%; }
+
+  /* ── Wave diagram ── */
+  .wave-diagram {
+    width: 100%;
+    margin-top: 14px;
+    border-radius: 10px;
+    background: rgba(3,25,63,0.5);
+    border: 1px solid rgba(56,201,232,0.15);
+    overflow: hidden;
+  }
+
+  /* ── Damage bar chart ── */
+  .bar-chart { margin-top: 14px; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .bar-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    width: 100px;
+    flex-shrink: 0;
+    font-weight: 400;
+  }
+  .bar-track {
+    flex: 1;
+    height: 22px;
+    background: rgba(3,25,63,0.6);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: white;
+    animation: barGrow 1.5s ease-out forwards;
+    transform-origin: left;
+  }
+  @keyframes barGrow {
+    from { width: 0 !important; }
+  }
+
+  /* ── Seismic visual ── */
+  .seismic-line {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  /* ── Lessons card ── */
+  .lesson-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .lesson-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgba(56,201,232,0.25);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 30px;
+  }
+  .lesson-text {
+    font-size: 0.85rem;
+    color: rgba(200,240,248,0.85);
+    line-height: 1.7;
+    font-weight: 300;
+    padding-top: 4px;
+  }
+  .lesson-text strong {
+    color: var(--white);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+  }
+
+  /* ── Figure captions ── */
+  .fig-caption {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+    line-height: 1.5;
+    border-left: 2px solid rgba(56,201,232,0.3);
+    padding-left: 8px;
+  }
+
+  /* ── References ── */
+  .refs-card {
+    background: rgba(3,25,63,0.7);
+    border: 1px solid rgba(56,201,232,0.15);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 22px;
+  }
+  .refs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(56,201,232,0.15);
+  }
+  .ref-item {
+    font-size: 0.77rem;
+    color: rgba(180,220,235,0.75);
+    line-height: 1.7;
+    margin-bottom: 6px;
+    font-weight: 300;
+    padding-left: 20px;
+    text-indent: -20px;
+  }
+  .ref-cols { columns: 2; gap: 30px; }
+
+  /* ── Divider ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(56,201,232,0.2), transparent);
+    margin: 6px 0;
+  }
+
+  /* ── Conclusion ── */
+  .conclusion-card {
+    background: linear-gradient(135deg, rgba(14,110,140,0.3) 0%, rgba(3,25,63,0.6) 100%);
+    border: 1px solid rgba(56,201,232,0.3);
+  }
+  .conclusion-card p { font-size: 0.9rem; }
+
+  /* ── Footer ── */
+  .footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(56,201,232,0.1);
+    margin-top: 6px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bar span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: rgba(100,180,210,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* ── Highlight tag ── */
+  .highlight {
+    background: rgba(56,201,232,0.12);
+    border: 1px solid rgba(56,201,232,0.25);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    color: var(--wave-cyan);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── Tsunami runup diagram ── */
+  .runup-visual {
+    margin-top: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(3,25,63,0.5);
+    border: 1px solid rgba(56,201,232,0.15);
+  }
+
+  /* ── Impact grid ── */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .impact-box {
+    background: rgba(3,25,63,0.5);
+    border: 1px solid rgba(56,201,232,0.15);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .impact-box.red { border-color: rgba(224,92,58,0.3); }
+  .impact-box.gold { border-color: rgba(240,180,41,0.3); }
+  .impact-title {
+    font-size: 0.72rem;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .impact-title.red { color: #ff8c70; }
+  .impact-title.gold { color: var(--gold); }
+  .impact-box p {
+    font-size: 0.82rem;
+    color: rgba(200,240,248,0.8);
+    line-height: 1.6;
+    font-weight: 300;
+  }

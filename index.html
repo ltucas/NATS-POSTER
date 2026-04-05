@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATS1755 – Tōhoku Earthquake & Tsunami 2011</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="ocean-bg">
+  <svg class="wave-layer" viewBox="0 0 1440 180" preserveAspectRatio="none">
+    <path d="M0,80 C360,160 720,0 1080,80 C1260,120 1350,60 1440,80 L1440,180 L0,180 Z" fill="white"/>
+  </svg>
+  <svg class="wave-layer" viewBox="0 0 1440 220" preserveAspectRatio="none">
+    <path d="M0,100 C240,40 480,160 720,100 C960,40 1200,160 1440,100 L1440,220 L0,220 Z" fill="white"/>
+  </svg>
+  <svg class="wave-layer" viewBox="0 0 1440 260" preserveAspectRatio="none">
+    <path d="M0,130 C300,60 600,200 900,130 C1050,90 1250,170 1440,130 L1440,260 L0,260 Z" fill="white"/>
+  </svg>
+</div>
+
+<div class="poster">
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+  <div class="header">
+    <div class="course-tag">NATS 1755 · Natural Hazards · Academic Poster</div>
+    <h1 class="main-title">When the Sea <span>Struck Back:</span><br>The 2011 Tōhoku Earthquake & Tsunami</h1>
+    <p class="subtitle">A scientific investigation of Japan's most catastrophic modern natural disaster</p>
+    <div class="meta-row">
+      <div class="meta-pill"><span class="icon">📍</span> Tōhoku Region, Japan</div>
+      <div class="meta-pill"><span class="icon">📅</span> March 11, 2011 · 14:46 JST</div>
+      <div class="meta-pill"><span class="icon">⚡</span> Magnitude 9.1 Mw</div>
+      <div class="meta-pill"><span class="icon">🌊</span> Tsunami Runup: 40.5 m</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ROW 1: Introduction + Key Stats + Timeline
+  ══════════════════════════════════════════════ -->
+  <div class="grid-main">
+
+    <!-- Introduction -->
+    <div class="card intro-card">
+      <div class="card-label">Introduction</div>
+      <h2>A Nation Shaken to Its Core</h2>
+      <p>On March 11, 2011, at 14:46:23 JST, a megathrust earthquake of magnitude <span class="highlight">Mw 9.1</span> struck 70 km east of the Oshika Peninsula, off Japan's Pacific coast. The earthquake — the most powerful ever recorded in Japan — ruptured a 450 km segment of the subduction zone where the Pacific Plate dives beneath the Okhotsk Plate (USGS, 2011).</p>
+      <br>
+      <p>The seismic event triggered a massive tsunami that devastated coastal communities across the Tōhoku region, killing nearly 20,000 people, displacing hundreds of thousands, and initiating the Fukushima Daiichi nuclear disaster — creating one of the most complex and far-reaching natural hazard events of the 21st century (Cabinet Office of Japan, 2011).</p>
+    </div>
+
+    <!-- Key Stats -->
+    <div class="card">
+      <div class="card-label coral">Key Statistics</div>
+      <h2>Scale of Devastation</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-number coral">19,747</span>
+          <span class="stat-label">Confirmed Deaths & Missing (NPA, 2023)</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">470 km</span>
+          <span class="stat-label">Coastline Damaged</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number gold">$235B</span>
+          <span class="stat-label">USD Economic Damage (World Bank, 2011)</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">40.5 m</span>
+          <span class="stat-label">Max Tsunami Runup Height at Miyako (NOAA, 2011)</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number coral">120,000</span>
+          <span class="stat-label">Buildings Destroyed</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">500 km/h</span>
+          <span class="stat-label">Tsunami Wave Speed (open ocean)</span>
+        </div>
+      </div>
+      <p class="fig-caption">Figure 1. Summary statistics of the 2011 Tōhoku event. Sources: NPA (2023); NOAA (2011); World Bank (2011).</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="card">
+      <div class="card-label">Event Timeline</div>
+      <h2>Sequence of Events</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">14:46 JST — March 11</div>
+          <div class="timeline-text">Mw 9.1 megathrust earthquake ruptures ~450 km fault segment; ground shaking lasts approximately 6 minutes (USGS, 2011)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:49 JST</div>
+          <div class="timeline-text">Japan Meteorological Agency (JMA) issues major tsunami warning for Pacific coast</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">~15:27 JST</div>
+          <div class="timeline-text">First tsunami waves reach Miyako City; waves exceed 10 m in multiple locations within minutes (JMA, 2011)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">~15:35–16:10 JST</div>
+          <div class="timeline-text">Successive waves strike Sendai, Ishinomaki, Rikuzentakata; seawall defences overwhelmed</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">15:41 JST</div>
+          <div class="timeline-text">Station power lost at Fukushima Daiichi Nuclear Power Plant; cooling systems begin to fail (TEPCO, 2012)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">March 12–15</div>
+          <div class="timeline-text">Hydrogen explosions at Fukushima Reactors 1, 3, and 4; Level 7 nuclear emergency declared</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">March 12 onward</div>
+          <div class="timeline-text">Pacific-wide tsunami alerts; waves reach Hawaii, US West Coast, South America within hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ROW 2: Geology + Tsunami Mechanics + Map
+  ══════════════════════════════════════════════ -->
+  <div class="grid-main">
+
+    <!-- Geological processes -->
+    <div class="card">
+      <div class="card-label">Geological Processes</div>
+      <h2>How Did It Occur?</h2>
+      <p>The 2011 Tōhoku earthquake resulted from a <strong style="color:var(--foam)">megathrust rupture</strong> at the Japan Trench subduction zone, where the Pacific Plate subducts beneath the Okhotsk Plate at approximately 8–9 cm/year (USGS, 2011).</p>
+      <h3>Subduction Mechanics</h3>
+      <ul class="bullet-list">
+        <li>Interseismic coupling (locking) accumulated strain over centuries along the plate interface</li>
+        <li>The rupture zone extended ~450 km along strike and ~200 km down-dip</li>
+        <li>Maximum fault slip of ~50 m was recorded near the trench axis — far exceeding previous estimates (Lay et al., 2011)</li>
+        <li>The seafloor was displaced vertically by up to 7 m, abruptly displacing the overlying water column</li>
+      </ul>
+      <h3>Seismic Characteristics</h3>
+      <ul class="bullet-list">
+        <li>Released ~600× more energy than the 1995 Kobe earthquake (Mw 6.9)</li>
+        <li>Japan's Honshu island shifted ~2.4 m eastward</li>
+        <li>Earth's axis shifted by ~17 cm; day shortened by ~1.8 microseconds (NASA, 2011)</li>
+        <li>Over 12,000 aftershocks recorded in the following year</li>
+      </ul>
+
+      <!-- Seismic waveform diagram -->
+      <svg class="seismic-line" viewBox="0 0 500 80">
+        <defs>
+          <linearGradient id="seisGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0e6e8c" stop-opacity="0.3"/>
+            <stop offset="40%" stop-color="#38c9e8" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0e6e8c" stop-opacity="0.4"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,40 L60,40 L65,38 L70,42 L75,36 L80,44 L90,10 L95,70 L100,5 L105,75 L110,8 L115,72 L120,12 L125,68 L130,18 L135,62 L140,22 L145,58 L150,26 L155,54 L160,30 L165,50 L170,34 L175,48 L180,36 L185,46 L190,38 L195,44 L200,39 L210,42 L220,38 L230,41 L240,39 L260,40 L500,40"
+              stroke="url(#seisGrad)" stroke-width="1.5" fill="none"/>
+        <line x1="87" y1="0" x2="87" y2="80" stroke="rgba(224,92,58,0.6)" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="90" y="12" fill="#ff8c70" font-size="8" font-family="DM Mono">P-wave</text>
+        <line x1="110" y1="0" x2="110" y2="80" stroke="rgba(240,180,41,0.6)" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="113" y="12" fill="#f0b429" font-size="8" font-family="DM Mono">S-wave</text>
+      </svg>
+      <p class="fig-caption">Figure 2. Schematic seismogram illustrating P-wave and S-wave arrivals characteristic of the Tōhoku event. Adapted from USGS (2011).</p>
+    </div>
+
+    <!-- Tsunami mechanics -->
+    <div class="card">
+      <div class="card-label">Tsunami Mechanics</div>
+      <h2>Wave Generation & Propagation</h2>
+      <p>The massive vertical seafloor displacement instantly set a column of water in motion, generating a tsunami that propagated outward at open-ocean speeds approaching 500–800 km/h — comparable to a jet aircraft (NOAA, 2011).</p>
+
+      <!-- SVG tsunami diagram -->
+      <div class="runup-visual">
+        <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+          <defs>
+            <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0a3060" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#03193f" stop-opacity="1"/>
+            </linearGradient>
+            <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#38c9e8" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#0e6e8c" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <!-- Sea floor -->
+          <rect x="0" y="140" width="500" height="60" fill="url(#seaGrad)"/>
+          <!-- Sloping seafloor near coast -->
+          <polygon points="320,140 500,100 500,140" fill="#0a2a5e"/>
+          <!-- Land -->
+          <polygon points="400,100 500,60 500,140 400,140" fill="#0d4a6e"/>
+          <!-- Tsunami wave -->
+          <path d="M50,120 Q120,60 190,90 Q240,110 280,70 Q320,30 360,55 Q390,70 400,100 L400,140 L50,140 Z" fill="url(#waveGrad)"/>
+          <!-- Wave surface line -->
+          <path d="M50,120 Q120,60 190,90 Q240,110 280,70 Q320,30 360,55 Q390,70 400,100" stroke="#38c9e8" stroke-width="2" fill="none"/>
+          <!-- Labels -->
+          <text x="30" y="115" fill="#7ec8dd" font-size="9" font-family="DM Mono">Open Ocean</text>
+          <text x="30" y="127" fill="#7ec8dd" font-size="9" font-family="DM Mono">(fast, low)</text>
+          <text x="270" y="58" fill="#38c9e8" font-size="9" font-family="DM Mono">Shoaling</text>
+          <text x="362" y="45" fill="#ff8c70" font-size="9" font-family="DM Mono">Runup</text>
+          <text x="362" y="57" fill="#ff8c70" font-size="9" font-family="DM Mono">40.5 m</text>
+          <!-- Arrow -->
+          <line x1="50" y1="155" x2="390" y2="155" stroke="#38c9e8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#38c9e8"/>
+            </marker>
+          </defs>
+          <text x="180" y="165" fill="#7ec8dd" font-size="8" font-family="DM Mono" text-anchor="middle">Direction of Propagation →</text>
+          <!-- Depth label -->
+          <line x1="10" y1="100" x2="10" y2="140" stroke="#7ec8dd" stroke-width="1"/>
+          <text x="13" y="122" fill="#7ec8dd" font-size="8" font-family="DM Mono">~7km</text>
+          <text x="13" y="132" fill="#7ec8dd" font-size="8" font-family="DM Mono">depth</text>
+        </svg>
+      </div>
+      <p class="fig-caption">Figure 3. Cross-section diagram illustrating tsunami shoaling from deep ocean to coastal runup, showing wave height amplification as water depth decreases. Adapted from NOAA (2011).</p>
+
+      <h3>Shoaling Effect</h3>
+      <ul class="bullet-list">
+        <li>As tsunami waves entered shallow coastal waters, velocity decreased while wave height dramatically amplified (NOAA, 2011)</li>
+        <li>Wavelengths measured 100–500 km in open ocean; wave periods of 10–40 minutes</li>
+        <li>Inundation reached up to 10 km inland in the Sendai Plain (USGS, 2011)</li>
+        <li>The tsunami was truly trans-oceanic — detected as far as Chile, Peru, and the US West Coast</li>
+      </ul>
+    </div>
+
+    <!-- Map / Epicenter Visual -->
+    <div class="card">
+      <div class="card-label">Geographic Context</div>
+      <h2>Location & Affected Area</h2>
+
+      <!-- SVG Map of Japan area -->
+      <div class="map-visual">
+        <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="epicGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#38c9e8" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#38c9e8" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- Ocean background -->
+          <rect width="300" height="220" fill="rgba(3,25,63,0.5)"/>
+
+          <!-- Simplified Japan / Honshu shape -->
+          <path d="M80,20 L95,35 L105,50 L112,70 L115,90 L118,110 L120,130 L125,150 L128,165 L122,178 L115,185 L108,188 L100,182 L95,170 L92,155 L88,140 L82,125 L78,110 L75,95 L72,75 L70,55 L72,38 Z"
+                fill="#0d4a6e" stroke="#1a9bbf" stroke-width="0.8" opacity="0.9"/>
+
+          <!-- Hokkaido -->
+          <path d="M95,15 L115,10 L130,18 L125,32 L110,38 L98,32 Z"
+                fill="#0d4a6e" stroke="#1a9bbf" stroke-width="0.6" opacity="0.8"/>
+
+          <!-- Kyushu/Shikoku hint -->
+          <path d="M68,170 L82,175 L78,190 L62,185 Z"
+                fill="#0d4a6e" stroke="#1a9bbf" stroke-width="0.5" opacity="0.7"/>
+
+          <!-- Japan Trench line -->
+          <path d="M155,25 L165,55 L168,85 L165,115 L160,145 L150,170"
+                stroke="#e05c3a" stroke-width="1.5" stroke-dasharray="5,3" fill="none" opacity="0.8"/>
+          <text x="168" y="92" fill="#ff8c70" font-size="8" font-family="DM Mono" transform="rotate(85,168,92)">Japan Trench</text>
+
+          <!-- Pacific Plate label -->
+          <text x="195" y="100" fill="rgba(56,201,232,0.5)" font-size="9" font-family="DM Mono">Pacific</text>
+          <text x="195" y="112" fill="rgba(56,201,232,0.5)" font-size="9" font-family="DM Mono">Plate</text>
+          <text x="40" y="100" fill="rgba(56,201,232,0.4)" font-size="9" font-family="DM Mono">Okhotsk</text>
+          <text x="40" y="112" fill="rgba(56,201,232,0.4)" font-size="9" font-family="DM Mono">Plate</text>
+
+          <!-- Epicenter -->
+          <circle cx="165" cy="90" r="30" fill="url(#epicGrad)"/>
+          <circle cx="165" cy="90" r="6" fill="#38c9e8" opacity="0.9"/>
+          <circle cx="165" cy="90" r="3" fill="white"/>
+          <!-- Pulse rings -->
+          <circle cx="165" cy="90" r="12" fill="none" stroke="#38c9e8" stroke-width="1" opacity="0.5">
+            <animate attributeName="r" values="6;30" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="165" cy="90" r="18" fill="none" stroke="#38c9e8" stroke-width="0.5" opacity="0.3">
+            <animate attributeName="r" values="6;40" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Epicenter label -->
+          <line x1="165" y1="84" x2="195" y2="60" stroke="rgba(56,201,232,0.5)" stroke-width="0.8"/>
+          <text x="198" y="58" fill="#38c9e8" font-size="8.5" font-family="DM Mono">Epicentre</text>
+          <text x="198" y="68" fill="#7ec8dd" font-size="7.5" font-family="DM Mono">38.3°N 142.4°E</text>
+
+          <!-- Tohoku region highlight -->
+          <path d="M103,65 L112,68 L118,90 L120,115 L112,118 L105,112 L100,90 L100,72 Z"
+                fill="#e05c3a" opacity="0.2" stroke="#e05c3a" stroke-width="0.5"/>
+          <text x="60" y="88" fill="#ff8c70" font-size="8" font-family="DM Mono">Tōhoku</text>
+          <text x="60" y="98" fill="#ff8c70" font-size="8" font-family="DM Mono">Region</text>
+          <line x1="85" y1="92" x2="100" y2="92" stroke="#ff8c70" stroke-width="0.7" stroke-dasharray="2,2"/>
+
+          <!-- Fukushima marker -->
+          <circle cx="110" cy="120" r="3.5" fill="#f0b429" opacity="0.9"/>
+          <text x="78" y="123" fill="#f0b429" font-size="7.5" font-family="DM Mono">Fukushima</text>
+          <line x1="98" y1="121" x2="106" y2="120" stroke="#f0b429" stroke-width="0.6"/>
+
+          <!-- Scale -->
+          <line x1="20" y1="205" x2="70" y2="205" stroke="#7ec8dd" stroke-width="1"/>
+          <text x="28" y="214" fill="#7ec8dd" font-size="7" font-family="DM Mono">~250 km</text>
+        </svg>
+      </div>
+      <p class="fig-caption">Figure 4. Map of Japan showing the epicentre (38.3°N, 142.4°E), Japan Trench subduction zone, and the Tōhoku region. The animated pulse represents seismic wave propagation. Sources: USGS (2011); JMA (2011).</p>
+
+      <div class="divider" style="margin-top:12px;"></div>
+      <ul class="bullet-list" style="margin-top:10px;">
+        <li>Epicentre: 70 km east of Oshika Peninsula, 130 km from Sendai</li>
+        <li>Focal depth: ~29 km (shallow — maximizes surface damage)</li>
+        <li>Most affected prefectures: Iwate, Miyagi, Fukushima</li>
+        <li>Tsunami warning zones extended along entire Pacific coast</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ROW 3: Human + Earth Impacts + Nuclear
+  ══════════════════════════════════════════════ -->
+  <div class="grid-main">
+
+    <!-- Human Impacts -->
+    <div class="card accent-coral">
+      <div class="card-label coral">Human & Societal Impacts</div>
+      <h2>Immediate & Long-Term Effects on Society</h2>
+
+      <div class="impact-grid">
+        <div class="impact-box red">
+          <div class="impact-title red">Short-Term</div>
+          <p>15,899 deaths; 2,529 missing; 6,157 injuries (NPA, 2023). Over 470,000 people displaced to evacuation shelters within days.</p>
+        </div>
+        <div class="impact-box">
+          <div class="impact-title">Infrastructure</div>
+          <p>Roads, bridges, railways severed; 4.4 million households without electricity; ~1.5 million without water (Cabinet Office, 2011).</p>
+        </div>
+        <div class="impact-box">
+          <div class="impact-title">Economic</div>
+          <p>$235B USD total damage — costliest natural disaster in history at the time (World Bank, 2011). Fisheries, agriculture, manufacturing devastated.</p>
+        </div>
+        <div class="impact-box red">
+          <div class="impact-title red">Long-Term</div>
+          <p>~160,000 Fukushima residents permanently displaced; elevated mental health crises; coastal communities permanently abandoned (UNSCEAR, 2013).</p>
+        </div>
+      </div>
+
+      <h3>Demographic & Community Impacts</h3>
+      <ul class="bullet-list coral">
+        <li>Elderly populations disproportionately affected; 65% of victims were over age 60 (Tanaka & Okamura, 2013)</li>
+        <li>Fishing and agricultural towns along Sanriku coast largely wiped out, leading to permanent rural depopulation</li>
+        <li>Psychological trauma: PTSD rates significantly elevated in survivors years after the event</li>
+        <li>Japan's reconstruction bill exceeded ¥25 trillion (~$250B USD) over a decade</li>
+      </ul>
+
+      <!-- Damage bar chart -->
+      <h3>Casualties by Prefecture (Approx.)</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">Miyagi</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:80%; background: linear-gradient(90deg, #c0392b, #e05c3a);">~9,500</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Iwate</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:50%; background: linear-gradient(90deg, #c0392b, #e05c3a);">~4,700</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Fukushima</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:20%; background: linear-gradient(90deg, #c0392b, #e05c3a);">~1,600</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Other</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:5%; background: linear-gradient(90deg, #7a3020, #a04030);">~200</div>
+          </div>
+        </div>
+      </div>
+      <p class="fig-caption">Figure 5. Approximate death toll by prefecture. Source: National Police Agency of Japan (NPA, 2023).</p>
+    </div>
+
+    <!-- Physical Earth Impacts -->
+    <div class="card">
+      <div class="card-label">Physical Earth Impacts</div>
+      <h2>How Earth's Systems Were Altered</h2>
+      <p>The scale of energy released fundamentally altered geophysical systems across multiple scales — from local landform changes to planetary perturbations (NASA, 2011).</p>
+
+      <h3>Immediate Geophysical Changes</h3>
+      <ul class="bullet-list">
+        <li>Honshu island permanently shifted ~2.4 m eastward toward the epicentre (USGS, 2011)</li>
+        <li>Earth's axis of rotation shifted by ~17 cm (NASA, 2011)</li>
+        <li>Coastlines subsided by up to 1.2 m; some areas were permanently inundated</li>
+        <li>New bathymetric surveys revealed significant seafloor restructuring along the Japan Trench</li>
+        <li>900 km² of coastal land permanently submerged due to land subsidence (USGS, 2011)</li>
+      </ul>
+
+      <h3>Coastal & Ecological Damage</h3>
+      <ul class="bullet-list">
+        <li>Tsunami scoured entire coastal ecosystems; marine habitats, tidal flats, and pine forests destroyed</li>
+        <li>Salt water intrusion contaminated agricultural land for years; ~23,600 ha of farmland affected (FAO, 2011)</li>
+        <li>Debris field estimated at 5 million tonnes reached the US and Canadian Pacific coasts by 2012–2013</li>
+        <li>Radiation contamination from Fukushima: 80% entered the Pacific Ocean (IRSN, 2012)</li>
+      </ul>
+
+      <h3>Long-Term Environmental Monitoring</h3>
+      <ul class="bullet-list">
+        <li>TEPCO and IAEA continue to monitor groundwater contamination around Fukushima through present day</li>
+        <li>Forest and coastal ecosystem recovery ongoing — some areas designated as permanent exclusion zones</li>
+        <li>Treated water release from Fukushima into Pacific Ocean began 2023 — ongoing international monitoring (IAEA, 2023)</li>
+      </ul>
+    </div>
+
+    <!-- Fukushima / Nuclear -->
+    <div class="card accent-gold">
+      <div class="card-label gold">Cascading Hazard</div>
+      <h2>The Fukushima Nuclear Disaster</h2>
+      <p>The tsunami's 14 m waves overtopped Fukushima Daiichi's 5.7 m seawall, disabling backup generators and triggering a <span class="highlight" style="color:var(--gold); border-color:rgba(240,180,41,0.3); background:rgba(240,180,41,0.08)">Level 7 nuclear emergency</span> — the highest on the INES scale, equivalent to Chernobyl (IAEA, 2011).</p>
+
+      <h3>Chain of Failure</h3>
+      <div class="timeline" style="margin-top:12px;">
+        <div class="timeline-item">
+          <div class="timeline-time" style="color:var(--gold)">Step 1: Earthquake</div>
+          <div class="timeline-text">Reactors automatically shut down (SCRAM) as designed; emergency generators activated</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time" style="color:var(--gold)">Step 2: Tsunami Strike</div>
+          <div class="timeline-text">~14 m waves exceeded seawall; diesel generators submerged and destroyed — complete station blackout (TEPCO, 2012)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time" style="color:var(--gold)">Step 3: Meltdown</div>
+          <div class="timeline-text">Without cooling, Reactors 1, 2, and 3 experienced full meltdown within days; zirconium-water reactions produced hydrogen gas</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time" style="color:var(--gold)">Step 4: Explosions</div>
+          <div class="timeline-text">Hydrogen explosions at Reactors 1, 3, and 4; radioactive cesium-137 and iodine-131 released (UNSCEAR, 2013)</div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-top:14px;"></div>
+      <ul class="bullet-list gold" style="margin-top:10px;">
+        <li>Evacuation zone: 20 km radius (~160,000 residents) — many never returned</li>
+        <li>Total radioactivity released: ~520 PBq of iodine-131 equivalent (UNSCEAR, 2013)</li>
+        <li>Classified as a "complex disaster" — seismic + tsunami + nuclear (IAEA, 2011)</li>
+        <li>Japan temporarily shut down all 50 of its nuclear reactors after the disaster</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ROW 4: Lessons + Conclusion
+  ══════════════════════════════════════════════ -->
+  <div class="grid-main">
+
+    <!-- Lessons Learned -->
+    <div class="card grid-wide">
+      <div class="card-label">Lessons Learned</div>
+      <h2>Scientific & Policy Insights from the Tōhoku Disaster</h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px;">
+        <div>
+          <div class="lesson-item">
+            <span class="lesson-num">01</span>
+            <div class="lesson-text">
+              <strong>Seismic Hazard Underestimation</strong>
+              Prior models vastly underestimated the maximum credible magnitude in the region. Post-event studies revealed geological evidence of similar events 1,000+ years ago that were not incorporated into hazard assessments (Lay et al., 2011). Probabilistic hazard models must integrate paleoseismological data.
+            </div>
+          </div>
+          <div class="lesson-item">
+            <span class="lesson-num">02</span>
+            <div class="lesson-text">
+              <strong>Seawall Overconfidence</strong>
+              Many communities trusted concrete seawalls to protect them, leading to delayed evacuation. Seawalls provided false security — true safety requires community education and robust evacuation culture (Cabinet Office, 2011).
+            </div>
+          </div>
+          <div class="lesson-item">
+            <span class="lesson-num">03</span>
+            <div class="lesson-text">
+              <strong>Vertical Evacuation Structures</strong>
+              Flat coastal plains offered no natural high ground. Dedicated vertical evacuation buildings (tsunami-resistant towers and elevated refuges) are now mandated in Japan's updated building codes (JMA, 2013).
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lesson-item">
+            <span class="lesson-num">04</span>
+            <div class="lesson-text">
+              <strong>Nuclear Siting Standards</strong>
+              The Fukushima disaster fundamentally changed global nuclear safety standards — tsunami hazard must be incorporated into reactor siting and the "defence-in-depth" framework must account for compound disasters (IAEA, 2011; UNSCEAR, 2013).
+            </div>
+          </div>
+          <div class="lesson-item">
+            <span class="lesson-num">05</span>
+            <div class="lesson-text">
+              <strong>Early Warning Systems</strong>
+              JMA's tsunami warning was issued within 3 minutes. Improvements to deep-ocean DART buoy networks and direct cell-phone emergency alerts have since been implemented across the Pacific basin (NOAA, 2011).
+            </div>
+          </div>
+          <div class="lesson-item">
+            <span class="lesson-num">06</span>
+            <div class="lesson-text">
+              <strong>Community Resilience & Memory</strong>
+              Ancient stone tsunami markers along the Sanriku coast that read "Do not build below this line" were largely ignored in modern times. Cultural memory and intergenerational hazard literacy must be preserved alongside engineered defences.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="card conclusion-card">
+      <div class="card-label">Conclusion</div>
+      <h2>Synthesis & Outlook</h2>
+      <p>The 2011 Tōhoku earthquake and tsunami stands as the most powerful natural disaster to strike Japan in recorded history and one of the most complex compound natural hazard events in modern times. Its cascading sequence — from seismicity to tsunami inundation to nuclear meltdown — exposed critical vulnerabilities in engineering assumptions, emergency planning, and risk governance.</p>
+      <br>
+      <p>Beyond the staggering human and economic losses, Tōhoku fundamentally altered how the scientific community models subduction zone hazards, how nations design nuclear infrastructure, and how coastal communities plan for low-probability, high-consequence events.</p>
+      <br>
+      <p>The event remains an enduring case study demonstrating that natural hazards do not occur in isolation — they cascade through engineered, social, and ecological systems in ways that demand truly interdisciplinary preparedness. Japan's ongoing recovery, reconstruction, and policy evolution continues to provide valuable data for hazard scientists worldwide (IAEA, 2023).</p>
+      <br>
+      <ul class="bullet-list">
+        <li>Japan invested over ¥25 trillion in reconstruction and coastal defence upgrades post-2011</li>
+        <li>International Tsunami Warning System expanded with additional Pacific DART buoys</li>
+        <li>Global nuclear safety standards revised through the IAEA Action Plan (2011)</li>
+        <li>Fukushima site decommissioning projected to take until 2050 (TEPCO, 2023)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       REFERENCES
+  ══════════════════════════════════════════════ -->
+  <div class="refs-card">
+    <div class="refs-title">References</div>
+    <div class="ref-cols">
+      <p class="ref-item">Cabinet Office of Japan. (2011). <em>Report on damage from the 2011 off the Pacific coast of Tōhoku Earthquake.</em> Government of Japan. https://www.cao.go.jp/</p>
+      <p class="ref-item">Food and Agriculture Organization of the United Nations (FAO). (2011). <em>Japan: Impact assessment of the tsunami and earthquake on agriculture, forestry and fisheries.</em> FAO. https://www.fao.org/</p>
+      <p class="ref-item">International Atomic Energy Agency (IAEA). (2011). <em>IAEA international fact finding expert mission of the Fukushima Daiichi NPP accident.</em> IAEA. https://www.iaea.org/</p>
+      <p class="ref-item">International Atomic Energy Agency (IAEA). (2023). <em>ALPS treated water discharge: IAEA comprehensive report on the safety review.</em> IAEA. https://www.iaea.org/</p>
+      <p class="ref-item">Institut de Radioprotection et de Sûreté Nucléaire (IRSN). (2012). <em>Consequences on the marine environment of radioactive releases from the Fukushima-Daiichi NPP accident.</em> IRSN Report No. DSU/2012-072.</p>
+      <p class="ref-item">Japan Meteorological Agency (JMA). (2011). <em>The 2011 off the Pacific coast of Tōhoku Earthquake: Tsunami warnings/advisories, observations, and information.</em> JMA. https://www.jma.go.jp/</p>
+      <p class="ref-item">Japan Meteorological Agency (JMA). (2013). <em>Lessons learned from the tsunami disaster caused by the 2011 Great East Japan Earthquake.</em> JMA. https://www.jma.go.jp/</p>
+      <p class="ref-item">Lay, T., Ammon, C. J., Kanamori, H., Xue, L., & Kim, M. J. (2011). Possible large near-trench slip during the 2011 Mw 9.0 off the Pacific coast of Tōhoku earthquake. <em>Earth, Planets and Space, 63</em>(7), 687–692. https://doi.org/10.5047/eps.2011.05.033</p>
+      <p class="ref-item">National Aeronautics and Space Administration (NASA). (2011, March 14). <em>NASA details earthquake effects on the Earth.</em> NASA Jet Propulsion Laboratory. https://www.jpl.nasa.gov/</p>
+      <p class="ref-item">National Police Agency of Japan (NPA). (2023). <em>Damage situation and police countermeasures associated with 2011 Tōhoku district — off the Pacific Ocean Earthquake.</em> NPA. https://www.npa.go.jp/</p>
+      <p class="ref-item">National Oceanic and Atmospheric Administration (NOAA). (2011). <em>2011 Tōhoku earthquake and tsunami: NOAA's response to a major international disaster.</em> NOAA Center for Tsunami Research. https://nctr.pmel.noaa.gov/</p>
+      <p class="ref-item">Tanaka, H., & Okamura, T. (2013). Demographic characteristics of fatalities in the 2011 Great East Japan Earthquake. <em>Journal of Epidemiology, 23</em>(6), 451–455. https://doi.org/10.2188/jea.JE20130058</p>
+      <p class="ref-item">Tokyo Electric Power Company (TEPCO). (2012). <em>Fukushima nuclear accident analysis report.</em> TEPCO. https://www.tepco.co.jp/</p>
+      <p class="ref-item">United Nations Scientific Committee on the Effects of Atomic Radiation (UNSCEAR). (2013). <em>Sources, effects and risks of ionizing radiation: Annex A — Levels and effects of radiation exposure due to the nuclear accident after the 2011 Great East Japan Earthquake and Tsunami.</em> United Nations.</p>
+      <p class="ref-item">U.S. Geological Survey (USGS). (2011). <em>Magnitude 9.1 — 2011 Great Tōhoku earthquake, Japan.</em> USGS Earthquake Hazards Program. https://earthquake.usgs.gov/</p>
+      <p class="ref-item">World Bank. (2011). <em>The recent earthquake and tsunami in Japan: Implications for East Asia.</em> East Asia and Pacific Economic Update. World Bank Group. https://www.worldbank.org/</p>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <span>NATS 1755 · Natural Hazards · Assignment #3 · Academic Poster</span>
+    <span>2011 Tōhoku Earthquake & Tsunami · Japan</span>
+    <span>All references in APA 7th Edition format</span>
+  </div>
+
+</div>
+</body>
+</html>
